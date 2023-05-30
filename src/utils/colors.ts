@@ -23,7 +23,7 @@ export const colorsToExclude = [
   'slate',
   'gray',
   'zinc',
-  // 'neutral',
+  'neutral',
   'stone',
   'cool',
 ]
