@@ -1,0 +1,86 @@
+<script setup lang="ts">
+  const props = defineProps({
+    article: {
+      type: Object,
+      required: true,
+    },
+  })
+
+  const emit = defineEmits(['fetch-tag', 'fetch-user'])
+
+  const fetchTag = (tag) => {
+    emit('fetch-tag', tag)
+  }
+
+  const fetchUser = (user) => {
+    emit('fetch-user', user)
+  }
+
+  const articleLink = computed(() => {
+    if (props.article) {
+      return `/articles/${props.article.id}`
+    }
+  })
+</script>
+<template>
+  <div class="rounded-lg pg-surface-container">
+    <div
+      class="flex flex-col h-full overflow-hidden rounded-lg shadow surface-container"
+    >
+      <a class="-mt-2 -mx-6" :href="articleLink">
+        <img alt="..." :src="article.social_image" />
+      </a>
+      <div class="p-4">
+        <a class="-mx-6 mb-2 whitespace-pre-wrap" :href="articleLink">
+          <h5>
+            {{ article.title }}
+          </h5>
+        </a>
+        <p class="dark:prose-invert prose prose-gray">
+          {{ article.description }}
+        </p>
+        <div class="font-semibold mt-4 text-xs">
+          <BaseButton
+            v-for="(tag, index) in article.tag_list"
+            :key="index"
+            class="mb-1 mr-1"
+            size="xs"
+            color="secondary"
+            @click="fetchTag(tag)"
+            >{{ tag }}</BaseButton
+          >
+        </div>
+      </div>
+      <div class="pg-on-primary-text pg-primary">
+        <div
+          class="flex items-center justify-between mt-auto p-4 rounded-b-lg shadow-2xl"
+        >
+          <BaseButton
+            v-if="article.user"
+            class="!bg-transparent flex items-center mr-2 space-x-2"
+            variant="ghost"
+            @click="fetchUser(article.user.username)"
+          >
+            <img
+              class="h-12 rounded-3xl w-12"
+              alt="..."
+              width="400"
+              height="400"
+              :src="article.user.profile_image"
+            />
+            <div class="flex flex-col items-start pg-on-primary-text">
+              <h6 class="whitespace-pre-wrap">{{ article.user.name }}</h6>
+              <PostDate :date="article.published_at" />
+            </div>
+          </BaseButton>
+          <div class="text-center">
+            <span class="whitespace-nowrap"
+              >{{ article.reading_time_minutes }} min</span
+            ><span> read</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+<style scoped></style>

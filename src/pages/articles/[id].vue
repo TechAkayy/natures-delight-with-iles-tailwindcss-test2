@@ -1,0 +1,38 @@
+<script lang="ts">
+  import { useArticles } from '~/composables/articles'
+  export default definePageComponent({
+    async getStaticPaths() {
+      const { listArticles } = useArticles()
+      const articles = await listArticles()
+      return articles.map((article) => ({
+        // Specify the parameters for the page.
+        params: { id: String(article.id) },
+
+        // Pass any data needed to render the page.
+        props: { articleId: article.id },
+      }))
+    },
+  })
+</script>
+
+<script setup lang="ts">
+  import { Article } from '~/composables/config'
+
+  const props = defineProps<{ articleId: number }>()
+  const { getArticle } = useArticles()
+  const article: Article = await getArticle(+props.articleId)
+
+  useHead({
+    title: computed(() => article.title),
+  })
+</script>
+
+<template layout="default">
+  <div>
+    <ArticleCardHeader
+      :cover="article.cover_image || article.social_image"
+    ></ArticleCardHeader>
+    <ArticleCard :article="article" />
+  </div>
+</template>
+<style scoped></style>
