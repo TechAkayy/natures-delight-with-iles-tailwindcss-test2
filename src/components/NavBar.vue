@@ -17,7 +17,7 @@
         <div class="flex h-24 items-center justify-between">
           <div class="flex items-center justify-between w-full">
             <div class="flex flex-shrink-0 items-center">
-              <a href="/" class="pg-primary-text">
+              <a href="/" class="flex items-center pg-primary-text">
                 <svg
                   version="1.0"
                   xmlns="http://www.w3.org/2000/svg"
@@ -38,7 +38,7 @@
                   ></path>
                   <path d="M-423-219h690v690h-690z"></path>
                 </svg>
-                <h6 class="font-extrabold leading-none text-xl">
+                <h6 class="font-extrabold leading-none pt-2 text-xl">
                   Nature's<br />Delight
                 </h6>
               </a>

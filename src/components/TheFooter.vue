@@ -53,17 +53,21 @@
                 external
                 target="_blank"
               >
-                <BaseIcon name="i-logos-facebook" class="text-2xl"></BaseIcon>
-              </a>
-              <a
+                <BaseIcon
+                  name="i-logos-facebook"
+                  class="text-2xl"
+                ></BaseIcon> </a
+              ><a
                 href="https://twitter.com/pinegrow"
                 aria-label="facebook"
                 external
                 target="_blank"
               >
-                <BaseIcon name="i-logos-twitter" class="text-2xl"></BaseIcon>
-              </a>
-              <a
+                <BaseIcon
+                  name="i-logos-twitter"
+                  class="text-2xl"
+                ></BaseIcon> </a
+              ><a
                 href="https://forum.pinegrow.com/vue-designer"
                 aria-label="facebook"
                 external
@@ -72,9 +76,8 @@
                 <BaseIcon
                   name="i-logos-discourse-icon"
                   class="text-2xl"
-                ></BaseIcon>
-              </a>
-              <a
+                ></BaseIcon> </a
+              ><a
                 href="https://www.youtube.com/@pinegrow/videos"
                 aria-label="facebook"
                 external
@@ -88,8 +91,7 @@
             </div>
           </div>
           <div class="my-6 text-center">
-            <a>+1 234 567-890</a><br />
-            <a>hello@fantico.com</a>
+            <a>+1 234 567-890</a> <br /><a>hello@fantico.com</a>
           </div>
         </div>
         <div
