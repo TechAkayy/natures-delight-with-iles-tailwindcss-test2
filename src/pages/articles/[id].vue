@@ -16,6 +16,7 @@
 </script>
 
 <script setup lang="ts">
+  import { computed } from 'vue'
   import { Article } from '~/composables/config'
 
   const props = defineProps<{ articleId: number }>()

@@ -32,19 +32,15 @@ export default defineConfig({
             configPath: 'tailwind.config.ts',
             cssPath: '@/assets/css/tailwind.css',
           },
-          plugins: [
-            {
-              name: 'My Awesome Lib 3.0',
-              key: 'my-awesome-lib',
-              pluginPath: fileURLToPath(
-                new URL('./my-awesome-lib/web-types.json', import.meta.url),
-              ),
-            },
-          ],
-          experimental: {
-            designableFileTypes: ['.astro', '.jsx', '.tsx', '.svelte'],
-            metaFrameworks: ['astro'],
-          },
+          // plugins: [
+          //   {
+          //     name: 'My Awesome Lib 3.0',
+          //     key: 'my-awesome-lib',
+          //     pluginPath: fileURLToPath(
+          //       new URL('./my-awesome-lib/web-types.json', import.meta.url),
+          //     ),
+          //   },
+          // ],
         } as LiveDesignerOptions,
       },
     ],

@@ -3,6 +3,7 @@ path: /feed.rss
 </page>
 
 <script setup lang="ts">
+  import { computed } from 'vue'
   import type { FeedOptions, FeedItem } from '@islands/feed'
   import { getPosts } from '~/composables/posts'
 

@@ -1,5 +1,5 @@
 import { computed } from 'vue'
-import { usePage, useRoute } from 'iles'
+import { usePage, useRouter, useRoute } from 'iles'
 
 export const useNav = () => {
   const routes = useRouter().getRoutes()

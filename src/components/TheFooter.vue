@@ -48,7 +48,7 @@
           <div class="inline-flex mt-6 space-x-3">
             <div class="flex flex-wrap space-x-4">
               <a
-                href="https://www.facebook.com/pinegrow/"
+                href="https://www.facebook.com/vuedesigner/"
                 aria-label="facebook"
                 external
                 target="_blank"
@@ -58,8 +58,8 @@
                   class="text-2xl"
                 ></BaseIcon> </a
               ><a
-                href="https://twitter.com/pinegrow"
-                aria-label="facebook"
+                href="https://twitter.com/vuedesigner/"
+                aria-label="twitter"
                 external
                 target="_blank"
               >
@@ -68,8 +68,8 @@
                   class="text-2xl"
                 ></BaseIcon> </a
               ><a
-                href="https://forum.pinegrow.com/vue-designer"
-                aria-label="facebook"
+                href="https://forum.pinegrow.com/c/vue-designer"
+                aria-label="discourse"
                 external
                 target="_blank"
               >
@@ -78,8 +78,8 @@
                   class="text-2xl"
                 ></BaseIcon> </a
               ><a
-                href="https://www.youtube.com/@pinegrow/videos"
-                aria-label="facebook"
+                href="https://www.youtube.com/@pgvuedesigner/"
+                aria-label="youtube"
                 external
                 target="_blank"
               >

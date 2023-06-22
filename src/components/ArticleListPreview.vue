@@ -1,4 +1,6 @@
 <script setup lang="ts">
+  import { computed } from 'vue'
+
   const props = defineProps({
     article: {
       type: Object,
@@ -19,18 +21,20 @@
   const articleLink = computed(() => {
     if (props.article) {
       return `/articles/${props.article.id}`
+    } else {
+      return ''
     }
   })
 </script>
 <template>
-  <div class="rounded-lg pg-surface-container">
+  <div class="h-full pg-surface-container rounded-lg">
     <div
       class="flex flex-col h-full overflow-hidden rounded-lg shadow surface-container"
     >
       <a class="-mt-2 -mx-6" :href="articleLink">
         <img alt="..." :src="article.social_image" />
       </a>
-      <div class="p-4">
+      <div class="grow p-4">
         <a class="-mx-6 mb-2 whitespace-pre-wrap" :href="articleLink">
           <h5>
             {{ article.title }}

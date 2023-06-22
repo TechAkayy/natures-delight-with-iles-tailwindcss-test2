@@ -1,4 +1,5 @@
 <script setup lang="ts">
+  import { computed } from 'vue'
   import type { Heading } from '@islands/headings'
   import type { SideBarItem } from '~/composables/config'
 
